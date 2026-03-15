@@ -107,7 +107,7 @@ return ob_get_clean();
 }
 
 /**
- *  Custom CSS and HTML for contact us
+ *  Custom CSS and HTML for contact us. 
 */
 add_shortcode('social_links', 'social_links_shortcode');
 
