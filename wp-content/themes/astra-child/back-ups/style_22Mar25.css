@@ -1,0 +1,195 @@
+/**
+Theme Name: Astra Child Theme
+Theme URI: https://wpastra.com/
+Author: wsa
+Author URI: https://wpastra.com/about/?utm_source=theme_preview&utm_medium=author_link&utm_campaign=astra_theme
+Description: Astra Child theme
+Version: 1.0
+Template: astra
+/* Note: The CSS files are loaded from assets/css/ folder. */
+
+.site-info:after {
+    content: none !important;
+}
+
+.ast-footer-copyright {
+    content: none !important;
+}
+
+/**
+ * BOF to make the header fixed.
+ */
+#ast-desktop-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Adjust the z-index as needed */
+/*    background-color: #000000;*/
+}
+#ast-mobile-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Adjust the z-index as needed */
+    margin-bottom: 500px;
+/*    background-color: #000000;*/
+}
+
+/*Adjust body padding to prevent content from hiding behind the fixed header */
+body {
+    padding-top: 1%;
+    background-color: #000000;
+
+}
+
+.ast-separate-container{
+    background-color: #000000;
+}
+
+.ast-separate-container .ast-article-single:not(.ast-related-post) {
+    background-color: #000000;
+    color: #ffffff; /* Set text color to white */
+}
+
+.ast-separate-container .ast-article-single:not(.ast-related-post) h1,
+.ast-separate-container .ast-article-single:not(.ast-related-post) h2,
+.ast-separate-container .ast-article-single:not(.ast-related-post) h3,
+.ast-separate-container .ast-article-single:not(.ast-related-post) h4,
+.ast-separate-container .ast-article-single:not(.ast-related-post) h5,
+.ast-separate-container .ast-article-single:not(.ast-related-post) h6 {
+    color: #ffffff; /* Set all heading colors to white */
+}
+
+
+
+
+/* Next Styling*/
+/* Next Styling*/
+.homepage-div {
+    align-items: stretch; /* Align items to stretch vertically */
+    justify-content: space-between;
+    max-width: 100%;
+    display: flex;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 6.5%;
+}
+
+
+.homepage-text-div {
+    max-width: 50%;
+    width: 100%;
+    line-height: 1.5;
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Align items to the left horizontally */
+    flex-direction: column;
+    color: #ffffff;
+    text-align: right; /* Ensure text is left-aligned */
+    font-size: 30px;
+}
+
+.headtextspan-homepage-text-div{
+    width: 100%;
+    font-size: 50px;
+}
+
+.focus-headtextspan-homepage-text-div{
+    color: #D7FF81; //green yellow
+    font-weight: bold;
+}
+
+.subtextspan-homepage-text-div {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.homepage-images-div {
+    max-width: 50%;
+    width: 100%;
+}
+
+.homepage-images-div .app-ss-image {
+    display: block;
+    max-height: 500px;
+    margin: 20px auto;
+    width: auto;
+    
+}
+
+/* Store buttons styling */
+.homepage-images-div .download-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.homepage-images-div .store-button {
+    margin: 5px;
+    width: auto;
+    height: 50px; /* Ensure the buttons aren't too large */
+}
+
+.mobile-social-icons-div{
+    margin-top: 50px;
+    display: none;
+}
+
+/* For body text */
+.custom-center-div{
+    width: 100%;
+    text-align: center;
+}
+
+
+/* For about us and contact us image div */
+.wp-block-uagb-container {
+    max-height: 300px;
+    margin-bottom: 50px;
+}
+
+
+
+
+/* BOF Media query for mobile devices */
+@media (max-width: 767px) {
+     .homepage-div{
+        margin-top: 35%;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 5%;
+        flex-direction: column;
+    }
+
+    .homepage-div .custom-center-div{
+        display: none;
+    }
+
+    .subtextspan-homepage-text-div {
+        margin-bottom: 0px;
+    }
+
+    .homepage-text-div {
+        text-align: center; /* Ensure text is left-aligned */
+        font-size: 16px;
+        margin-bottom: 5%;
+    }
+
+    .headtextspan-homepage-text-div{
+        font-size: 25px;
+    }
+
+    .mobile-social-icons-div{
+        display: block;
+    }
+
+    .ast-separate-container{
+        padding-top: 25%;
+    }
+
+
+}
+/* EOF Media query for mobile devices */
+
+
+
