@@ -1,0 +1,381 @@
+/**
+Theme Name: Astra Child Theme
+Theme URI: https://wpastra.com/
+Author: wsa
+Author URI: https://wpastra.com/about/?utm_source=theme_preview&utm_medium=author_link&utm_campaign=astra_theme
+Description: Astra Child theme
+Version: 1.0
+Template: astra
+/* Note: The CSS files are loaded from assets/css/ folder. */
+
+.site-info:after {
+    content: none !important;
+}
+
+.ast-footer-copyright {
+    content: none !important;
+}
+
+/**
+ * BOF to make the header fixed.
+ */
+#ast-desktop-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Adjust the z-index as needed */
+/*    background-color: #000000;*/
+}
+#ast-mobile-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Adjust the z-index as needed */
+    margin-bottom: 500px;
+/*    background-color: #000000;*/
+}
+
+/*Adjust body padding to prevent content from hiding behind the fixed header */
+body {
+    padding-top: 1%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Next Styling – modern landing (single column) */
+.homepage-div {
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    margin-top: 2%;
+    gap: 2rem;
+}
+
+.homepage-text-div {
+    max-width: 640px;
+    width: 100%;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.125rem;
+}
+
+.headtextspan-homepage-text-div {
+    width: 100%;
+    font-size: clamp(1rem, 2vw, 1.625rem);
+    /* font-weight: 700; */
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.focus-headtextspan-homepage-text-div {
+    color: #D7FF81;
+    font-weight: bold;
+}
+
+.subtextspan-homepage-text-div {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    width: 100%;
+    font-size: 1.25rem;
+    color: #64748b;
+}
+
+/* Join Waitlist CTA button (scrolls to #waitlist-form) */
+.waitlist-cta-button {
+    display: inline-block;
+    padding: 0.85rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0f172a;
+    background: #D7FF81;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.waitlist-cta-button:hover {
+    background: #c5eb6e;
+}
+
+.waitlist-cta-button:active {
+    transform: scale(0.99);
+}
+
+/* Scroll target: leave space for fixed header */
+#waitlist-form {
+    scroll-margin-top: 120px;
+}
+
+.waitlist-section {
+    display: none;
+    width: 100%;
+    max-width: 480px;
+    margin: 1rem auto 0;
+    text-align: center;
+}
+
+.waitlist-section.is-visible {
+    display: block;
+}
+
+.waitlist-section-title {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+/* Waitlist benefits */
+.waitlist-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+    width: 100%;
+}
+
+.waitlist-benefits li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.5;
+}
+
+.waitlist-benefits li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #D7FF81;
+}
+
+/* Waitlist form */
+.waitlist-form {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 1.75rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.waitlist-field {
+    margin-bottom: 1.25rem;
+}
+
+.waitlist-field:last-of-type {
+    margin-bottom: 1.5rem;
+}
+
+.waitlist-field label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.35rem;
+}
+
+.waitlist-field .optional {
+    font-weight: 400;
+    color: #94a3b8;
+}
+
+.waitlist-field input {
+    width: 100%;
+    padding: 0.65rem 0.9rem;
+    font-size: 0.95rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: #fff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+
+.waitlist-field input::placeholder {
+    color: #94a3b8;
+}
+
+.waitlist-field input:focus {
+    outline: none;
+    border-color: #D7FF81;
+    box-shadow: 0 0 0 3px rgba(215, 255, 129, 0.2);
+}
+
+.waitlist-field-desc {
+    display: block;
+    font-size: 0.75rem;
+    color: #94a3b8;
+    margin-top: 0.35rem;
+    line-height: 1.4;
+}
+
+.waitlist-submit {
+    width: 100%;
+    padding: 0.85rem 1.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0f172a;
+    background: #D7FF81;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.waitlist-submit:hover {
+    background: #c5eb6e;
+}
+
+.waitlist-submit:active {
+    transform: scale(0.99);
+}
+
+.homepage-images-div {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.homepage-images-div .app-ss-image {
+    display: block;
+    max-height: 500px;
+    margin: 0 auto;
+    width: auto;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Store buttons styling */
+.homepage-images-div .download-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.homepage-images-div .store-button {
+    margin: 5px;
+    width: auto;
+    height: 50px; /* Ensure the buttons aren't too large */
+}
+
+.mobile-social-icons-div{
+    margin-top: 50px;
+    display: none;
+}
+
+.mobile-download-buttons{
+    display: none;
+ }
+
+.download-buttons{
+    display: block;
+}
+
+/* For body text */
+.custom-center-div{
+    width: 100%;
+    text-align: center;
+}
+
+
+/* For about us and contact us image div */
+.wp-block-uagb-container {
+    max-height: 300px;
+    margin-bottom: 50px;
+}
+
+
+
+
+/* BOF Media query for mobile devices */
+@media (max-width: 767px) {
+    .homepage-div {
+        margin-top: 35%;
+        padding: 5%;
+        gap: 1.5rem;
+    }
+
+    .homepage-div .custom-center-div {
+        display: none;
+    }
+
+    .homepage-text-div {
+        max-width: 100%;
+        text-align: center;
+        font-size: 1rem;
+        align-items: center;
+    }
+
+    .headtextspan-homepage-text-div {
+        font-size: 1.6rem;
+    }
+
+    .subtextspan-homepage-text-div {
+        margin-bottom: 0.5rem;
+    }
+
+    #waitlist-form {
+        scroll-margin-top: 100px;
+    }
+
+    .waitlist-section {
+        max-width: 100%;
+    }
+
+    .waitlist-benefits {
+        text-align: left;
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .waitlist-benefits li {
+        font-size: 0.9rem;
+    }
+
+    .waitlist-form {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .homepage-images-div .app-ss-image {
+        max-height: 340px;
+    }
+
+    .mobile-social-icons-div {
+        display: block;
+    }
+
+    .mobile-download-buttons {
+        display: block;
+    }
+
+    .download-buttons {
+        display: none;
+    }
+
+    .ast-separate-container {
+        padding-top: 25%;
+    }
+}
+/* EOF Media query for mobile devices */
+
+
+
