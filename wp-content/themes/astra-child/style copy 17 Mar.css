@@ -8,33 +8,6 @@ Version: 1.0
 Template: astra
 /* Note: The CSS files are loaded from assets/css/ folder. */
 
-:root {
-    --hero-title-start: #65BDAE;
-    --coral-bright: #D7FF81;
-    --hero-title-end: #dff0ed;
-
-    /* --hero-title-start: #ED5F53;
-    --coral-bright: #9F857C;
-    --hero-title-end: #65BDAE; */
-
-    --hero-title-start2: #65BDAE;
-    --coral-bright2: #65BDAE;
-    --hero-title-end2: #65BDAE;
-
-
-    --primaryaccentgradient: linear-gradient(135deg, var(--hero-title-start) 0%, var(--coral-bright) 52%, var(--hero-title-end) 100%);
-    --primarybuttongradient: linear-gradient(90deg, var(--hero-title-start2) 0%, var(--coral-bright2) 50%, var(--hero-title-end2) 100%);
-    --primaryaccentcolor: var(--primaryaccentgradient);
-    /* Use this when a solid color is required (e.g. text color) */
-    --primaryaccentcolorsolid: var(--hero-title-start);
-    /* --primarybuttoncolor: var(--primarybuttongradient); */
-    /* --primarybuttoncolor: #16e9c6; */
-    --primarybuttoncolor: #93d89d;
-
-    --primarybuttontextcolor: #121212;
-    --primarytextcolor: #999999;
-}
-
 .site-info:after {
     content: none !important;
 }
@@ -61,16 +34,8 @@ Template: astra
     width: 100%;
     z-index: 1000;
     /* Adjust the z-index as needed */
+    margin-bottom: 500px;
     /*    background-color: #000000;*/
-}
-
-/* Ensure header stays fixed in all scenarios */
-#ast-desktop-header,
-#ast-mobile-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
 }
 
 /* Primary menu: green only for non-selected items (selected keeps theme default) */
@@ -160,47 +125,16 @@ h6 {
     color: #F2F2F2 !important;
 }
 
-/* Keep homepage headline on one line (desktop) */
-@media (min-width: 768px) {
-    .headtextspan-homepage-text-div {
-        white-space: nowrap;
-        font-size: clamp(36px, 3.2vw, 50px);
-        text-align: left;
-    }
-}
-
 .focus-headtextspan-homepage-text-div {
-    background: var(--primaryaccentcolor);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: #D7FF81;
     /*green yellow*/
     font-weight: bold;
 }
 
 .subtextspan-homepage-text-div {
-    margin-left: 50px;
     margin-top: 20px;
     margin-bottom: 50px;
     width: 100%;
-}
-
-.homepage-subpoints {
-    margin: 0;
-}
-
-.homepage-subpoints>div {
-    padding-left: 1.25rem !important;
-    margin: 0.25rem 0;
-}
-
-/* Homepage text column alignment overrides */
-.homepage-text-div .subtextspan-homepage-text-div {
-    text-align: left;
-}
-
-.homepage-text-div .launch-row-desktop {
-    justify-content: center;
 }
 
 /* Launching soon + Join Waitlist same row */
@@ -219,79 +153,21 @@ h6 {
     display: none;
 }
 
-.waitlist-cta-button,
-.waitlist-submit {
+.waitlist-cta-button {
     display: inline-block;
     padding: 0.6rem 1.25rem;
     font-size: 1rem;
     font-weight: 600;
-    color: var(--primarybuttontextcolor);
-    background: var(--primarybuttoncolor);
+    color: #fff;
+    background: #4C63F9;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.2s;
 }
 
-/* Make homepage "JOIN WAITLIST" more prominent on desktop */
-@media (min-width: 768px) {
-    .launch-row-desktop .waitlist-cta-button {
-        padding: 0.9rem 1.75rem;
-        font-size: 1.125rem;
-        border-radius: 10px;
-    }
-}
-
-/* Tablet tuning (including iPad 1024x1366) */
-@media (min-width: 768px) and (max-width: 1100px) {
-    .homepage-div {
-        margin-top: 10%;
-        gap: 2rem;
-        align-items: center;
-    }
-
-    .homepage-text-div {
-        max-width: 56%;
-        font-size: 24px;
-        align-items: flex-start;
-        text-align: left;
-    }
-
-    .headtextspan-homepage-text-div {
-        white-space: normal;
-        font-size: clamp(42px, 4.4vw, 50px);
-    }
-
-    .subtextspan-homepage-text-div {
-        margin-left: 0;
-        margin-bottom: 2rem;
-    }
-
-    .homepage-images-div {
-        max-width: 44%;
-    }
-
-    .homepage-images-div .app-ss-image {
-        max-height: 460px;
-        width: 100%;
-        max-width: 360px;
-        margin: 0 auto;
-    }
-}
-
-.waitlist-cta-button:visited {
-    color: var(--primarybuttontextcolor);
-}
-
-.waitlist-cta-button:hover,
-.waitlist-submit:hover {
-    background: var(--primarybuttoncolor);
-    color: #ffffff;
-}
-
-.waitlist-submit:disabled {
-    opacity: 0.75;
-    cursor: not-allowed;
+.waitlist-cta-button:hover {
+    background: #4C63F9;
 }
 
 /* Waitlist page section (left-aligned) */
@@ -323,10 +199,6 @@ h6 {
     color: #F2F2F2;
 }
 
-.waitlist-intro {
-    margin: 0.25rem 0 0.6rem 0;
-}
-
 .waitlist-submit-error {
     margin-top: 0.75rem;
     color: #ef4444;
@@ -342,7 +214,7 @@ h6 {
 .waitlist-benefits {
     list-style: none;
     padding: 0;
-    margin: 0 0 0.75rem 0;
+    margin: 0 0 1.5rem 0;
 }
 
 .waitlist-benefits li {
@@ -362,14 +234,14 @@ h6 {
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: var(--primaryaccentgradient);
+    background: #D7FF81;
 }
 
 .waitlist-form {
     width: 100%;
     max-width: 420px;
     margin: 0;
-    padding: 0.75rem 0;
+    padding: 1.25rem 0;
 }
 
 .waitlist-field {
@@ -389,8 +261,7 @@ h6 {
     color: #999999;
 }
 
-.waitlist-field input,
-.waitlist-field select {
+.waitlist-field input {
     width: 100%;
     padding: 0.5rem 0.75rem;
     font-size: 0.95rem;
@@ -430,7 +301,21 @@ h6 {
     line-height: 1.3;
 }
 
+.waitlist-submit {
+    padding: 0.65rem 1.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0f172a;
+    background: #D7FF81;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
 
+.waitlist-submit:hover {
+    background: #c5eb6e;
+}
 
 .homepage-images-div {
     max-width: 50%;
@@ -443,13 +328,6 @@ h6 {
     margin: 20px auto;
     width: auto;
 
-}
-
-/* Homepage embedded waitlist (hidden until CTA click) */
-.homepage-waitlist-container {
-    width: 100%;
-    padding: 0 5%;
-    margin: 2rem 0 0 0;
 }
 
 /* Store buttons styling */
@@ -484,75 +362,6 @@ h6 {
     text-align: center;
 }
 
-/* Team page shortcode */
-.team-page-section {
-    width: 100%;
-    max-width: 900px;
-    padding: 0 5%;
-    margin: 2rem auto;
-}
-
-.team-grid {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 1rem;
-}
-
-.team-member-card {
-    flex: 1 1 0;
-    min-width: 0;
-    background: transparent;
-    border: 0;
-    border-radius: 0;
-    padding: 0.5rem;
-    text-align: center;
-}
-
-.team-member-photo {
-    width: 220px;
-    height: 220px;
-    border-radius: 999px;
-    border: 4px solid #8a8a8a;
-    object-fit: cover;
-    margin: 0 auto 1rem;
-    display: block;
-}
-
-.team-member-name {
-    /* color: var(--primarytextcolor); */
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 1.2;
-    margin: 0 0 0.12rem 0;
-}
-
-.team-member-role {
-    color: var(--primarytextcolor);
-    font-size: 1rem;
-    line-height: 1.25;
-    margin: 0 0 0.6rem 0;
-}
-
-.team-member-linkedin {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--primarytextcolor);
-}
-
-.team-member-linkedin-icon {
-    width: 5rem;
-    /* height: 28px; */
-    display: block;
-}
-
-.team-member-linkedin:hover {
-    color: #93d89d;
-    opacity: 0.9;
-}
-
 
 /* For about us and contact us image div */
 .wp-block-uagb-container {
@@ -579,8 +388,6 @@ h6 {
 
     .subtextspan-homepage-text-div {
         margin-bottom: 0px;
-        margin-left: 5px;
-        text-align: center !important;
     }
 
     .launch-row,
@@ -593,9 +400,9 @@ h6 {
         gap: 1rem;
     }
 
-    /* .launch-row-desktop {
+    .launch-row-desktop {
         display: none;
-    } */
+    }
 
     .waitlist-section {
         margin-left: auto;
@@ -604,15 +411,14 @@ h6 {
     }
 
     .homepage-text-div {
-        align-items: flex-start;
         text-align: center;
+        /* Ensure text is left-aligned */
         font-size: 16px;
         margin-bottom: 5%;
     }
 
     .headtextspan-homepage-text-div {
         font-size: 25px;
-        white-space: normal;
     }
 
     .mobile-social-icons-div {
@@ -629,39 +435,6 @@ h6 {
 
     .ast-separate-container {
         padding-top: 25%;
-    }
-
-    /* Keep 2 team columns side by side on mobile too */
-    .team-grid {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 0.75rem;
-    }
-
-    .team-member-card {
-        padding: 0.75rem;
-    }
-
-    .team-member-photo {
-        width: 120px;
-        height: 120px;
-    }
-
-     .team-member-name {
-        font-size: 0.75rem!important; 
-        margin: 0 0 0.1rem 0;
-    }
-
-    .team-member-role {
-        font-size: 0.7rem!important; 
-        margin: 0 0 0.5rem 0;
-    } 
-
-    .team-member-linkedin-icon {
-        width: 3.5rem;
-        /* height: 30px; */
     }
 
 

@@ -373,9 +373,6 @@ function render_waitlist_form_block($args = array()) {
 
 function homepage_landing_shortcode() {
     //add_action('wp_footer', 'add_custom_scripts');
-    $waitlist_status = isset($_GET['waitlist_status']) ? sanitize_key($_GET['waitlist_status']) : '';
-    $show_homepage_waitlist = in_array($waitlist_status, array('success', 'error'), true);
-
     ob_start();
     ?>
 
@@ -409,7 +406,7 @@ function homepage_landing_shortcode() {
 
 <br>
 <br>
-<div id="homepage-waitlist-container" class="homepage-waitlist-container"<?php echo $show_homepage_waitlist ? '' : ' hidden'; ?>>
+<div id="homepage-waitlist-container" class="homepage-waitlist-container" hidden>
     <?php
     echo render_waitlist_form_block(array(
         'waitlist_type' => 'normal',
